@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  color-scheme: dark;
+  // scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  height: 1300vw;
+}
+
+.card-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+.main{
+    width: 100% !important;
+    // height:  26.666666666666668vh;
+    // background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+      font-size: 40px;
+      border-bottom: 1px solid white;
+      margin-bottom: 20px;
+    }p{
+      font-size: 20px;
+    }
+  }
+.card{
+  // margin-top: 130px;
+  display: flex;
+  // justify-content: center;
+  align-items: flex-start;
+  // flex-
+  // justify-content: center;
+ 
+  // 26.666666666666668
+  width: 80vw;
+  height: 900px;
+  .more{ 
+  border: 1px solid rgb(165, 165, 165);
+  background-color: rgb(36, 36, 36);
+  display: flex;
+    width: 100%;
+    // background-color: green;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+    // align-items: center;
+  }
+  // align-items: center;
+}
+
+main {
+  height: 100vh;
+  .typed-con {
+    margin-left: 10px;
+    position: absolute;
+    top: 70lvh;
+    font-size: clamp(50px, 10vw, 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: clamp(50px, 10vw, 100px);
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #049ef4;
+      // #049ef4;
+      background-size: 200%;
+      &:hover {
+        // transform: scale(1.5);
+        color: #049ef4;
+        transition: 1s;
+        -webkit-text-stroke-color: transparent;
+        // -webkit-text-stroke-width: 0px;
+        // -webkit-text-stroke: 2px transparent;
+        // text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .hover {
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    h1 {
+      font-size: clamp(50px, 10vw, 100px);
+      color: transparent;
+      text-align: 0 1px 1px;
+      -webkit-text-stroke: 1px #fff;
+      text-shadow: none;
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .hover:hover h1 {
+      transform: scale(1.5);
+      color: #049ef4;
+      -webkit-text-stroke: 2px transparent;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
