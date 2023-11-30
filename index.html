@@ -7,23 +7,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
   <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-  <nav data-aos="fade-down" data-aos-delay="1000" class="bg-transparent fixed w-screen z-20 top-0 start-0 px-6">
+  <div class="cur-con">
+    <div class="circle"></div>
+<div class="circle z-10"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+  </div>
+  <nav class="bg-transparent fixed w-screen z-20 top-0 start-0 px-6">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
       <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">HASAN</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-500" style="font-family: 'Ubuntu', sans-serif;">HASAN</span>
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button
+        <a
+          href="/"
           class="relative inline-flex items-center max-md:hidden justify-center p-0.5  overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-blue-500 to-blue-500 group-hover:from-blue-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-blue-800">
           <span
             class="relative px-2.5 py-2 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
             Github
           </span>
-        </button>
+        </a>
         <button data-collapse-toggle="navbar-sticky" type="button"
           class="toggle-btn inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden  focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
           aria-controls="navbar-sticky" aria-expanded="false">
@@ -37,10 +64,11 @@
       <div class="toggle-con items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
         id="navbar-sticky">
         <ul
-          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent">
+          style="font-size: 16px;"
+          class=" flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent">
           <li>
             <a id="homeer"
-              class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 md:text-blue-500"
+              class="block py-2 px-3  rounded    md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
               aria-current="page">Home</a>
           </li>
           <li>
@@ -60,9 +88,10 @@
       </div>
     </div>
   </nav>
-  <main class="" id="home" data-aos="fade-up">
+  <main class="" id="home"  draggable="true">
     <div class="typed-con">
       <!-- <div class="concept concept-two"> -->
+        <div class="header">
         <div class="hover">
             <h1>W</h1>
         </div>
@@ -82,37 +111,110 @@
             <h1>m</h1>
         </div><div class="hover">
           <h1>e</h1>
-      </div>
+      </div></div>
       <section class="mr-5"></section>
     <!-- </div> -->
     <br class="ssm:hidden"> <span class="typed" id="typed"></span>
   </div>
   </main>
-  <section style="height: 500px;width: 100%;"></section>
-
-  <section class="h-screen" style="width: 100%;" > 
+  <div class="carsol-con" data-aos="zoom-in-up">
+    <div class="carsol-wrap">
+      <div class="carsol" style="height: 70px;"><img src="/icons/html.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt="html"></div>
+      <div class="carsol"><img src="/icons/css.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/js.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/vue.ico" alt="html"></div>
+      <div class="carsol"><img src="/icons/ts.svg" alt=""></div>
+      <div class="carsol" style="height: 70px;margin-left: 20px;"><img src="/icons/Tailwind CSS.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt=""></div>
+      <div class="carsol"><img src="/icons/python.png" alt=""></div>
+      <div class="carsol"><img src="/icons/php.png" alt=""></div>
+      <div class="carsol">9</div>
+      <div class="carsol">10</div>
+    </div>
+    <div class="carsol-wrap">
+      <div class="carsol" style="height: 70px;"><img src="/icons/html.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt="html"></div>
+      <div class="carsol"><img src="/icons/css.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/js.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/vue.ico" alt="html"></div>
+      <div class="carsol"><img src="/icons/ts.svg" alt=""></div>
+      <div class="carsol" style="height: 70px;margin-left: 20px;"><img src="/icons/Tailwind CSS.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt=""></div>
+      <div class="carsol"><img src="/icons/python.png" alt=""></div>
+      <div class="carsol"><img src="/icons/php.png" alt=""></div>
+      <div class="carsol">9</div>
+      <div class="carsol">10</div>
+    </div>
+    <div class="carsol-wrap" draggable="true">
+      <div class="carsol" style="height: 70px;"><img src="/icons/html.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt="html"></div>
+      <div class="carsol"><img src="/icons/css.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/js.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/vue.ico" alt="html"></div>
+      <div class="carsol"><img src="/icons/ts.svg" alt=""></div>
+      <div class="carsol" style="height: 70px;margin-left: 20px;"><img src="/icons/Tailwind CSS.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt=""></div>
+      <div class="carsol"><img src="/icons/python.png" alt=""></div>
+      <div class="carsol"><img src="/icons/php.png" alt=""></div>
+      <div class="carsol">9</div>
+      <div class="carsol">10</div>
+    </div>
+  <!--    <div class="carsol-wrap">
+      <div class="carsol" style="height: 70px;padding-left: 20px;"><img src="/icons/html.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt="html"></div>
+      <div class="carsol"><img src="/icons/css.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/js.png" alt="html"></div>
+      <div class="carsol"><img src="/icons/vue.ico" alt="html"></div>
+      <div class="carsol"><img src="/icons/ts.svg" alt=""></div>
+      <div class="carsol" style="height: 70px;margin-left: 20px;"><img src="/icons/Tailwind CSS.png" style="width: 70px !important;  position: absolute;z-index: 10;" alt=""></div>
+      <div class="carsol"><img src="/icons/python.png" alt=""></div>
+      <div class="carsol"><img src="/icons/php.png" alt=""></div>
+      <div class="carsol">9</div>
+      <div class="carsol">10</div>
+      <div class="carsol">10</div><div class="carsol">10</div><div class="carsol">10</div><div class="carsol">10</div>
+    </div>-->
+  </div> 
+  <section style="width: 100%;" id="about"></section>
     <div class="card-con">
     <div class="card">
-      <div class="main">
-         <h1>About Me</h1>
-         <p>about me</p>
+      <div class="main" >
+           <div class="header">
+      <!-- <div class="concept concept-two"> -->
+        <div class="hover">
+            <h1>A</h1>
+        </div>
+        <div class="hover">
+            <h1>B</h1>
+        </div>
+        <div class="hover">
+            <h1>O</h1>
+        </div>
+        <div class="hover">
+            <h1>U</h1>
+        </div>
+        <div class="hover">
+            <h1>T</h1>
+        </div> 
+        <div class="hover">
+        <h1 class="whitespace-nowrap mx-2"><wbr></h1>
+        </div>
+      <div class="hover">
+          <h1>M</h1>
+      </div>
+     
+      <div class="hover">
+        <h1>E</h1>
+    </div>
+      <section class="mr-5"></section>
+    <!-- </div> -->
+    <br class="ssm:hidden"> <span class="typed" id="typed"></span>
+  </div>
+         <!-- <p>about me</p> -->
        </div>
   
-      <div class="more">
-        <h1>nuh/yo</h1>
-        <p>about me</p>
+      <div class="more" data-aos="zoom-in">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima officia rerum nobis quasi impedit. Non possimus necessitatibus modi explicabo esse, facilis, tempora sint architecto incidunt reiciendis nulla obcaecati aperiam delectus.</p>
+        <!-- <p>about me</p> -->
       </div>
     </div>
-    <!-- <br>
-    <br>
-    <br>
-    <br> -->
-    <div style="margin: 130px 0px;"></div>
-      <!-- <section class="" style="width: 100%;height: 30px;" >  -->
-    <div class="card">
+    <!-- <div style="margin: 130px 0px;"></div> -->
+    <!-- <div class="card hidden">
       <div class="main">
          <h1>nuh/uh</h1>
-         <p>about me</p>
        </div>
   
       <div class="more">
@@ -121,24 +223,17 @@
       </div>
     </div>
     <div style="margin: 130px 0px;"></div>
-    <!-- <br>
-    <br>
-    <br>
-    <br> -->
-    
+    <div class="card hidden">
+      <div class="main">
+         <h1>nuh/uh</h1>
 
-      <!-- <section class="" style="width: 100%;height: 30px;" >  -->
-    <div class="card">
-      <div class="main">
-         <h1>nuh/uh</h1>
-         <p>about me</p>
        </div>
   
       <div class="more">
         <h1>nuh/yo</h1>
         <p>about me</p>
       </div>
-    </div>
+    </div> -->
   </div>
 <!-- 
     <div class="card-con">

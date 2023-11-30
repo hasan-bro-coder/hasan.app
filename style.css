@@ -3,11 +3,15 @@
 @tailwind utilities;
 * {
   color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(124, 124, 124) black;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
   height: 1300vw;
+  overflow-x: hidden;
 }
 
 .card-con {
@@ -15,22 +19,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 15vw;
 }
 
-.main {
-  width: 100% !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.main h1 {
-  font-size: 40px;
-  border-bottom: 1px solid white;
-  margin-bottom: 20px;
-}
-.main p {
-  font-size: 20px;
+nav ul li {
+  transition: 1s;
 }
 
 .card {
@@ -39,14 +32,44 @@ body {
   width: 80vw;
   height: 900px;
 }
-.card .more {
-  border: 1px solid rgb(165, 165, 165);
-  background-color: rgb(36, 36, 36);
+.card .main {
+  width: 100% !important;
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .main .header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #049ef4;
+  padding-left: 20px;
+}
+.card .main h1 {
+  font-size: 40px;
+  color: #049ef4;
+  display: inline-block;
+}
+.card .main p {
+  font-size: 20px;
+}
+.card .more {
+  display: flex;
+  width: 61.804697157%;
   height: 100%;
   display: flex;
   justify-content: center;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+.card .more p {
+  font-size: 15px;
+  line-height: 29.124px;
+}
+.card .more p::first-letter {
+  color: #049ef4;
+  font-size: 18px;
 }
 
 main {
@@ -56,16 +79,24 @@ main .typed-con {
   margin-left: 10px;
   position: absolute;
   top: 70lvh;
-  font-size: clamp(50px, 10vw, 100px);
+  font-size: max(50px, 10vw);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+main .typed-con .header {
+  display: flex;
+  padding-left: 1vw;
+}
 main .typed-con span {
-  font-size: clamp(50px, 10vw, 100px);
+  font-family: "Ubuntu", sans-serif;
+  font-size: max(50px, 10vw);
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #049ef4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: 200%;
 }
 main .typed-con span:hover {
@@ -79,7 +110,8 @@ main .typed-con .hover {
   place-items: center;
 }
 main .typed-con h1 {
-  font-size: clamp(50px, 10vw, 100px);
+  font-family: "Ubuntu", sans-serif;
+  font-size: max(47px, 10vw);
   color: transparent;
   text-align: 0 1px 1px;
   -webkit-text-stroke: 1px #fff;
@@ -91,4 +123,143 @@ main .typed-con .hover:hover h1 {
   color: #049ef4;
   -webkit-text-stroke: 2px transparent;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.carsol-con {
+  overflow: hidden;
+  margin-top: 15vw;
+  /* background: white; */
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carsol-wrap {
+  animation-fill-mode: alternate;
+  display: inline-block;
+  animation: 6s slide infinite linear;
+  animation-play-state: running;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carsol-wrap .carsol {
+  width: clamp(50px, 3.3333333333vw, 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+}
+.carsol-wrap .carsol img {
+  min-width: 3.3333333333vw;
+}
+
+@media (max-width: 350px) {
+  main {
+    height: 100vh;
+  }
+  main .typed-con {
+    margin-left: 10px;
+    position: absolute;
+    top: 70lvh;
+    font-size: max(50px, 10vw);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  main .typed-con .header {
+    display: flex;
+    padding-left: 0px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  main .typed-con span {
+    font-family: "Ubuntu", sans-serif;
+    font-size: max(50px, 10vw);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #049ef4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 200%;
+  }
+  main .typed-con span:hover {
+    color: #049ef4;
+    transition: 1s;
+    -webkit-text-stroke-color: transparent;
+  }
+  main .typed-con .hover {
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  main .typed-con h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: max(47px, 10vw);
+    color: transparent;
+    text-align: 0 1px 1px;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(115px) scale(76);
+  }
+  main .typed-con .hover:hover h1 {
+    transform: scale(1.5) translateY(115px);
+    -webkit-text-stroke: 2px transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 568px) {
+  .typed-cursor {
+    display: none;
+  }
+  .main {
+    width: 100% !important;
+  }
+  .main h1 {
+    font-size: 40px;
+  }
+  .main p {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    height: 900px;
+  }
+  .card .more {
+    width: 100%;
+    height: 100%;
+  }
+  .card .more p {
+    margin-top: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
